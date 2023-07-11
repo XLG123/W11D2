@@ -1,14 +1,20 @@
 import ReactSlider from "react-slider";
 import './Thermometer.css';
+// import useClimateContext from "../../context/ClimateContext";
+import { useClimateContext } from "../../context/ClimateContext";
 
 function Thermometer() {
+
+  // debugger
+  const {climateName, setClimateName} = useClimateContext();
   return (
+    // <h1>Hello</h1>
     <section>
       <h2>Thermometer</h2>
       <div className="actual-temp">Actual Temperature: {"x"}°F</div>
       <ReactSlider
         value={40}
-        onAfterChange={(val) => {}}
+        onAfterChange={(val) => climateName}
         className="thermometer-slider"
         thumbClassName="thermometer-thumb"
         trackClassName="thermometer-track"
