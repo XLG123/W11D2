@@ -5,7 +5,7 @@ import { createContext, useContext, useState } from 'react';
 export const ClimateContext = createContext();
 
 export const useClimateContext = () => {
-  debugger
+  // debugger
   return useContext(ClimateContext);
 };
 
